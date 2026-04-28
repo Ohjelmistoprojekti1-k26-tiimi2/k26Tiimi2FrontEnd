@@ -1,24 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import "./Home.css";
 
 function Categories() {
   return (
-    <div style={{ padding: "20px" }}>
-      <Link to="/">← Takaisin etusivulle</Link>
+    <div className="home-container">
 
-      <h2>Valitse tuoteryhmä</h2>
+      <Navbar />
 
-      <ul>
-        <li>
-          <Link to="/toys">Selaa leluja</Link>
-        </li>
-        <li>
-          <Link to="/foods">Selaa koiranruokia</Link>
-        </li>
-        <li>
-          <Link to="/clothes">Selaa vaatteita</Link>
-        </li>
-      </ul>
+      <div className="hero">
+        <h1>Tuotteet</h1>
+
+        <ul>
+          <li><Link to="/toys">Lelut</Link></li>
+          <li><Link to="/foods">Koiranruoat</Link></li>
+          <li><Link to="/clothes">Vaatteet</Link></li>
+        </ul>
+      </div>
+
     </div>
   );
 }

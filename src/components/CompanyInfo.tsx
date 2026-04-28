@@ -1,57 +1,60 @@
 import React from "react";
-import { Card, CardContent, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Card, CardContent, Typography, Box } from "@mui/material";
+import Navbar from "./Navbar";
+import "./Home.css";
 
 function CompanyInfo() {
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="home-container">
 
-      {/* TEHTY TÄSSÄ KOHTAA VASTA FEIKKIDATALLA, PEPPI TÄYTTÄÄ NÄMÄ MYÖHEMMIN */}
-      <Link to="/">← Takaisin etusivulle</Link>
+      <Navbar />
 
-      <h2>Yrityksen tiedot</h2>
+      <Box className="hero">
+        <h1>Yrityksen tiedot</h1>
 
-      <Card sx={{ maxWidth: 400, marginTop: 2 }}>
-        <CardContent>
-          <Typography variant="h6">
-            Yrityksen nimi
-          </Typography>
+        <Card className="info-card">
+          <CardContent>
 
-          <Typography>
-            Pikkumussukan koiratarvike
-          </Typography>
+            <Typography variant="h6">
+              Yrityksen nimi
+            </Typography>
 
-          <Typography sx={{ marginTop: 2 }}>
-            Omistajat:
-          </Typography>
+            <Typography>
+              Pikkumussukan koiratarvike
+            </Typography>
 
-          <Typography>
-            Peppi Vine
-            Nadja Lyyra
-            Greetel Marttinen
-            Tanja Vatka
-            Arttu Inkala
+            <Typography sx={{ marginTop: 2 }}>
+              Omistajat:
+            </Typography>
 
-          </Typography>
+            <Typography className="owners">
+              Peppi Vine <br />
+              Nadja Lyyra <br />
+              Greetel Marttinen <br />
+              Tanja Vatka <br />
+              Arttu Inkala
+            </Typography>
 
-          <Typography sx={{ marginTop: 2 }}>
-            Perustamisvuosi:
-          </Typography>
+            <Typography sx={{ marginTop: 2 }}>
+              Perustamisvuosi:
+            </Typography>
 
-          <Typography>
-            2026
-          </Typography>
+            <Typography>
+              2026
+            </Typography>
 
-          <Typography sx={{ marginTop: 2 }}>
-            Y-tunnus:
-          </Typography>
+            <Typography sx={{ marginTop: 2 }}>
+              Y-tunnus:
+            </Typography>
 
-          <Typography>
-            1234567-8
-          </Typography>
+            <Typography>
+              1234567-8
+            </Typography>
 
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      </Box>
+
     </div>
   );
 }
