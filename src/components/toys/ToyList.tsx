@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import { fetchToys } from "../../api/productapi";
@@ -30,8 +30,8 @@ function ToyList() {
         columns={columns}
         getRowId={(row: any) => row._links.self.href}
         autoHeight
-        pageSize={10}
-        rowsPerPageOptions={[10]}
+        paginationModel={{ pageSize: 10, page: 0 }}
+        pageSizeOptions={[10]}
         localeText={{
           noRowsLabel: 'Ei tuotteita',
           footerRowSelected: (count) => `${count} rivi(ä) valittu`

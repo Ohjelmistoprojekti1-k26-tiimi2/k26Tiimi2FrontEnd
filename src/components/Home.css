@@ -105,7 +105,7 @@
     line-height: 1.6;
 }
 
-/* DataGrid-tuuelista */
+/* DataGrid-tuotelista */
 .product-grid {
     max-width: 800px;
     margin: 0 auto;
@@ -118,11 +118,95 @@
 .product-grid h2 {
     color: #3b2068;
     font-size: 1.8rem;
-    margin-bottom: 20px;
+}
+
+/* ========================= */
+/* UUSI CATEGORIES LAYOUT */
+/* ========================= */
+
+.categories-page {
+    padding: 60px 40px;
     text-align: center;
 }
 
-/* DataGrid-otsikkorivi */
+.categories-title {
+    font-size: 2.5rem;
+    color: #3b2068;
+    margin-bottom: 40px;
+}
+
+/* Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Kortti */
+.category-card {
+    position: relative;
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Kuva */
+.category-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Hover zoom */
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.1)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+/* Hover overlay */
+.category-card:hover .overlay {
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.2)
+    );
+}
+
+/* Teksti */
+.overlay span {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* ========================= */
+/* DataGrid tyylit */
+/* ========================= */
+
 .product-grid .MuiDataGrid-columnHeaders {
     background-color: #d6c6f0 !important;
     border-radius: 8px 8px 0 0 !important;
@@ -134,13 +218,11 @@
     font-size: 1rem !important;
 }
 
-/* DataGrid-solut */
 .product-grid .MuiDataGrid-cell {
     color: #3b2068 !important;
     border-color: #e0d4f5 !important;
 }
 
-/* DataGrid-rivi */
 .product-grid .MuiDataGrid-row:hover {
     background-color: #f0e8ff !important;
 }
@@ -149,7 +231,6 @@
     background-color: #f8f4fc !important;
 }
 
-/* DataGrid-footer */
 .product-grid .MuiDataGrid-footerContainer {
     background-color: #d6c6f0 !important;
     border-radius: 0 0 8px 8px !important;
