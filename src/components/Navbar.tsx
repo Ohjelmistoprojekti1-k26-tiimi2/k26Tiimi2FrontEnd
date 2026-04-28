@@ -66,6 +66,9 @@ function Navbar() {
           onMouseEnter={handleOpen}
           onMouseLeave={handleClose}
           className="menu-text"
+          sx={{
+            marginRight: "8px" 
+          }}
         >
           Menu
 
@@ -73,6 +76,7 @@ function Navbar() {
             anchorEl={anchorEl}
             open={Boolean(anchorEl)}
             onClose={handleClose}
+            disableScrollLock 
             slotProps={{
               list: {
                 onMouseLeave: handleClose,
