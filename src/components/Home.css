@@ -78,6 +78,22 @@
     font-size: 1rem;
 }
 
+/* kuva vasemmassa alareunassa */
+.bottom-image-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.bottom-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 /* otsikko kortissa */
 .info-card .MuiTypography-h6 {
     font-size: 1.2rem;
