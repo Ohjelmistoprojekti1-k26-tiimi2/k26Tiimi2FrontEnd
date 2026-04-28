@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import { fetchFoods } from "../../api/productapi";
+import "../Home.css";
 
 function FoodList() {
   const [foods, setFoods] = useState([]);
@@ -19,12 +20,15 @@ function FoodList() {
   }, []);
 
   return (
-    <div style={{ height: 500 }}>
+    <div className="product-grid">
       <h2>Koiranruoat</h2>
       <DataGrid
         rows={foods}
         columns={columns}
+        pageSizeOptions={[5, 10, 25]}
+        initialState={{ pagination: { paginationModel: { pageSize: 5 } } }}
         getRowId={(row: any) => row._links.self.href}
+        autoHeight
       />
     </div>
   );

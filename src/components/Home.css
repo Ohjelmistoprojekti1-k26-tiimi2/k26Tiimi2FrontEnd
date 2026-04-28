@@ -10,6 +10,7 @@
 .topbar {
     background-color: #d6c6f0 !important;
     box-shadow: none !important;
+    min-height: 80px !important;
 }
 
 /* toolbar layout */
@@ -31,8 +32,9 @@
 .menu-text {
     cursor: pointer;
     color: #3b2068;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 40px;
 }
 
 /* hero */
@@ -85,4 +87,54 @@
 /* omistajalista */
 .owners {
     line-height: 1.6;
+}
+
+/* DataGrid-tuuelista */
+.product-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f6f0ff !important;
+    border-radius: 16px !important;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+.product-grid h2 {
+    color: #3b2068;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* DataGrid-otsikkorivi */
+.product-grid .MuiDataGrid-columnHeaders {
+    background-color: #d6c6f0 !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+.product-grid .MuiDataGrid-columnHeaderTitle {
+    color: #3b2068 !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+/* DataGrid-solut */
+.product-grid .MuiDataGrid-cell {
+    color: #3b2068 !important;
+    border-color: #e0d4f5 !important;
+}
+
+/* DataGrid-rivi */
+.product-grid .MuiDataGrid-row:hover {
+    background-color: #f0e8ff !important;
+}
+
+.product-grid .MuiDataGrid-row:nth-of-type(even) {
+    background-color: #f8f4fc !important;
+}
+
+/* DataGrid-footer */
+.product-grid .MuiDataGrid-footerContainer {
+    background-color: #d6c6f0 !important;
+    border-radius: 0 0 8px 8px !important;
 }
