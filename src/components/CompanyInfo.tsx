@@ -1,21 +1,20 @@
-import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import Navbar from "./Navbar";
-import "./Home.css";
+import "./CompanyInfo.css";
 
 function CompanyInfo() {
   return (
-    <div className="home-container">
+    <div className="company-info-container">
 
       <Navbar />
 
-      <Box className="hero">
+      <Box className="company-hero">
         <h1>Yrityksen tiedot</h1>
 
         <Card className="info-card">
           <CardContent>
 
-            <Typography variant="h6">
+            <Typography variant="h6" className="section-title">
               Yrityksen nimi
             </Typography>
 
@@ -23,7 +22,7 @@ function CompanyInfo() {
               Pikkumussukan koiratarvike
             </Typography>
 
-            <Typography sx={{ marginTop: 2 }}>
+            <Typography className="section-title">
               Omistajat:
             </Typography>
 
@@ -35,7 +34,7 @@ function CompanyInfo() {
               Arttu Inkala
             </Typography>
 
-            <Typography sx={{ marginTop: 2 }}>
+            <Typography className="section-title">
               Perustamisvuosi:
             </Typography>
 
@@ -43,7 +42,7 @@ function CompanyInfo() {
               2026
             </Typography>
 
-            <Typography sx={{ marginTop: 2 }}>
+            <Typography className="section-title">
               Y-tunnus:
             </Typography>
 

@@ -1,9 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 
+/* ========================= */
+/* GLOBAL RESET */
+/* ========================= */
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* ========================= */
+/* HOME CONTAINER */
+/* ========================= */
+
 .home-container {
     font-family: 'Belleza', sans-serif;
     min-height: 100vh;
     background-color: #e8dff5;
+    padding-top: 90px;
+    padding-bottom: 60px;
 }
 
 /* ========================= */
@@ -36,7 +52,7 @@
 }
 
 /* ========================= */
-/* HERO (uusi moderni) */
+/* HERO */
 /* ========================= */
 
 .hero-modern {
@@ -44,7 +60,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 80px 60px;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -64,7 +80,6 @@
     margin-bottom: 30px;
 }
 
-/* CTA nappi */
 .cta-button {
     display: inline-block;
     background-color: #bfa8e6;
@@ -80,15 +95,18 @@
     background-color: #a78cd9;
 }
 
-/* hero kuva */
+/* ========================= */
+/* HERO IMAGE (KASVATUS) */
+/* ========================= */
+
 .hero-image {
-    max-width: 500px;
+    max-width: 560px;
     width: 100%;
     border-radius: 16px;
 }
 
 /* ========================= */
-/* KAMPANJA */
+/* CAMPAIGN */
 /* ========================= */
 
 .campaign-section {
@@ -130,7 +148,7 @@
 }
 
 /* ========================= */
-/* KATEGORIAT */
+/* CATEGORIES */
 /* ========================= */
 
 .categories-page {
@@ -194,7 +212,10 @@
     font-weight: 600;
 }
 
+/* ========================= */
+/* SCROLL */
+/* ========================= */
+
 html {
     scroll-behavior: smooth;
 }
-

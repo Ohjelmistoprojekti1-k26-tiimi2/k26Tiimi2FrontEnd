@@ -3,7 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import { fetchFoods } from "../../api/productapi";
 import Navbar from "../Navbar";
-import "../Home.css";
+import "../ProductList.css";
 
 function FoodList() {
   const [foods, setFoods] = useState([]);
@@ -21,23 +21,25 @@ function FoodList() {
   }, []);
 
   return (
-    <div className="home-container">
+    <div className="product-page">
       <Navbar />
+
       <div className="product-grid">
         <h2>Koiranruoat</h2>
-      <DataGrid
-        rows={foods}
-        columns={columns}
-        getRowId={(row: any) => row._links.self.href}
-        autoHeight
-        paginationModel={{ pageSize: 10, page: 0 }}
-        pageSizeOptions={[10]}
-        localeText={{
-          noRowsLabel: 'Ei tuotteita',
-          footerRowSelected: (count) => `${count} rivi(ä) valittu`
-        }}
-      />
-    </div>
+
+        <DataGrid
+          rows={foods}
+          columns={columns}
+          getRowId={(row: any) => row._links.self.href}
+          autoHeight
+          paginationModel={{ pageSize: 10, page: 0 }}
+          pageSizeOptions={[10]}
+          localeText={{
+            noRowsLabel: "Ei tuotteita",
+            footerRowSelected: (count) => `${count} rivi(ä) valittu`
+          }}
+        />
+      </div>
     </div>
   );
 }

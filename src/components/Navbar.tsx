@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 
 import HomeIcon from "@mui/icons-material/Home";
-import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 
 import { Link } from "react-router-dom";
@@ -48,7 +47,15 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" className="topbar">
+    <AppBar
+      position="fixed"
+      className="topbar"
+      elevation={0}
+      sx={{
+        left: 0,
+        right: 0,
+      }}
+    >
       <Toolbar className="topbar-toolbar">
 
         <Typography className="logo">
