@@ -29,10 +29,14 @@ function ClothesList() {
       <DataGrid
         rows={clothes}
         columns={columns}
-        pageSizeOptions={[5, 10, 25]}
-        initialState={{ pagination: { paginationModel: { pageSize: 5 } } }}
         getRowId={(row: any) => row._links.self.href}
         autoHeight
+        pageSize={10}
+        rowsPerPageOptions={[]}
+        localeText={{
+          noRowsLabel: 'Ei tuotteita',
+          footerRowSelected: (count) => `${count} rivi(ä) valittu`
+        }}
       />
     </div>
     </div>
