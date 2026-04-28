@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import { fetchClothes } from "../../api/productapi";
+import Navbar from "../Navbar";
 import "../Home.css";
 
 function ClothesList() {
@@ -21,8 +22,10 @@ function ClothesList() {
   }, []);
 
   return (
-    <div className="product-grid">
-      <h2>Vaatteet</h2>
+    <div className="home-container">
+      <Navbar />
+      <div className="product-grid">
+        <h2>Vaatteet</h2>
       <DataGrid
         rows={clothes}
         columns={columns}
@@ -31,6 +34,7 @@ function ClothesList() {
         getRowId={(row: any) => row._links.self.href}
         autoHeight
       />
+    </div>
     </div>
   );
 }
