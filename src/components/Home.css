@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+
+.home-container {
+    font-family: 'Belleza', sans-serif;
+    min-height: 100vh;
+    background-color: #e8dff5;
+    padding: 40px 24px;
+}
+
+.home-container h1 {
+    font-family: 'Belleza', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #3b2068;
+    margin-bottom: 12px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.home-container p {
+    font-size: 1.1rem;
+    color: #5a4080;
+    margin-bottom: 24px;
+}

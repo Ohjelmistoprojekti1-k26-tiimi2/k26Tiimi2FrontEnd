@@ -1,10 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+=======
+>>>>>>> 05e706f2de4a6ffc626a4704223ca3188d1e6f05
 import "./Home.css";
 
 function Home() {
   return (
+<<<<<<< HEAD
     <>
       {/* Yläpalkki */}
       <AppBar position="static">
@@ -14,6 +18,11 @@ function Home() {
           <Typography variant="h6">
             🐶 Pikku Mussukan koiratarvike
           </Typography>
+=======
+    <div className="home-container">
+      <h1>Pikku Mussukan koiratarvike</h1>
+      <p>Valitse toiminto:</p>
+>>>>>>> 05e706f2de4a6ffc626a4704223ca3188d1e6f05
 
           {/* Navigaatio */}
           <div className="nav-buttons">
