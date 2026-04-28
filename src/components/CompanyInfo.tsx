@@ -18,7 +18,7 @@ function CompanyInfo() {
           </Typography>
 
           <Typography>
-            Tmi Eläinkauppa Karvakamut
+            Pikkumussukan koiratarvike
           </Typography>
 
           <Typography sx={{ marginTop: 2 }}>
@@ -26,9 +26,12 @@ function CompanyInfo() {
           </Typography>
 
           <Typography>
-            Maija Meikäläinen  
-            Matti Meikäläinen
-            Meidän ryhmäläiset jne jne
+            Peppi Vine
+            Nadja Lyyra
+            Greetel Marttinen
+            Tanja Vatka
+            Arttu Inkala
+
           </Typography>
 
           <Typography sx={{ marginTop: 2 }}>
