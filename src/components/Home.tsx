@@ -5,10 +5,16 @@ function Home() {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Pikku Mussukan koiratarvike</h1>
-      <p>Siirry selaamaan tuotteita:</p>
+      <p>Valitse toiminto:</p>
 
       <Link to="/categories">
         <button>Selaa tuotteita</button>
+      </Link>
+
+      <br /><br />
+
+      <Link to="/company">
+        <button>Yrityksen tiedot</button>
       </Link>
     </div>
   );
