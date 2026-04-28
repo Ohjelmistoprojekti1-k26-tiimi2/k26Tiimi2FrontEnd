@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Categories() {
   return (
     <div style={{ padding: "20px" }}>
-
       <Link to="/">← Takaisin etusivulle</Link>
 
       <h2>Valitse tuoteryhmä</h2>
