@@ -11,8 +11,7 @@ import {
 } from "@mui/material";
 
 import HomeIcon from "@mui/icons-material/Home";
-import CategoryIcon from "@mui/icons-material/Category";
-import PetsIcon from "@mui/icons-material/Pets"; // 🐾 tassu-ikoni
+import PetsIcon from "@mui/icons-material/Pets";
 import InfoIcon from "@mui/icons-material/Info";
 
 import { Link } from "react-router-dom";
@@ -52,12 +51,10 @@ function Navbar() {
     <AppBar position="static" className="topbar">
       <Toolbar className="topbar-toolbar">
 
-        {/* Logo */}
         <Typography className="logo">
           Pikkumussukan koiratarvike
         </Typography>
 
-        {/* Menu */}
         <Box
           onMouseEnter={handleOpen}
           onMouseLeave={handleClose}
@@ -84,52 +81,37 @@ function Navbar() {
               },
             }}
           >
-            {/* Päälinkit */}
+
             <MenuItem component={Link} to="/" onClick={handleClose} sx={menuItemStyles}>
-              <ListItemIcon sx={{ minWidth: 40, color: "#3b2068" }}>
+              <ListItemIcon sx={{ minWidth: 40 }}>
                 <HomeIcon fontSize="small" />
               </ListItemIcon>
-              <Typography sx={{ fontSize: "0.95rem", fontWeight: 500 }}>
-                Etusivu
-              </Typography>
+              Etusivu
             </MenuItem>
 
-            <MenuItem component={Link} to="/categories" onClick={handleClose} sx={menuItemStyles}>
-              <ListItemIcon sx={{ minWidth: 40, color: "#3b2068" }}>
-                <PetsIcon fontSize="small" />
-              </ListItemIcon>
-              <Typography sx={{ fontSize: "0.95rem", fontWeight: 500 }}>
-                Valikoima
-              </Typography>
-            </MenuItem>
+            <Divider sx={{ my: 1 }} />
 
-            <Divider sx={{ my: 1, mx: 2 }} />
-
-            {/* Tuotekategoriat */}
             <Box sx={sectionHeaderStyles}>Tuotteet</Box>
 
             <MenuItem component={Link} to="/toys" onClick={handleClose} sx={menuItemStyles}>
-              <Typography sx={{ fontSize: "0.9rem" }}>Lelut</Typography>
+              Lelut
             </MenuItem>
 
             <MenuItem component={Link} to="/foods" onClick={handleClose} sx={menuItemStyles}>
-              <Typography sx={{ fontSize: "0.9rem" }}>Koiranruoat</Typography>
+              Koiranruoat
             </MenuItem>
 
             <MenuItem component={Link} to="/clothes" onClick={handleClose} sx={menuItemStyles}>
-              <Typography sx={{ fontSize: "0.9rem" }}>Vaatteet</Typography>
+              Vaatteet
             </MenuItem>
 
-            <Divider sx={{ my: 1, mx: 2 }} />
+            <Divider sx={{ my: 1 }} />
 
-            {/* Meistä */}
             <MenuItem component={Link} to="/company" onClick={handleClose} sx={menuItemStyles}>
-              <ListItemIcon sx={{ minWidth: 40, color: "#3b2068" }}>
+              <ListItemIcon sx={{ minWidth: 40 }}>
                 <InfoIcon fontSize="small" />
               </ListItemIcon>
-              <Typography sx={{ fontSize: "0.95rem", fontWeight: 500 }}>
-                Meistä
-              </Typography>
+              Meistä
             </MenuItem>
 
           </Menu>

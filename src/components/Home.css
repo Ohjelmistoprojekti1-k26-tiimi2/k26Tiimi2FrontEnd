@@ -6,122 +6,131 @@
     background-color: #e8dff5;
 }
 
-/* Yläpalkki */
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
 .topbar {
     background-color: #d6c6f0 !important;
     box-shadow: none !important;
     min-height: 80px !important;
 }
 
-/* toolbar layout */
 .topbar-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
-/* logo */
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #3b2068;
-    letter-spacing: 1px;
 }
 
-/* menu teksti */
 .menu-text {
     cursor: pointer;
     color: #3b2068;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-right: 40px;
-}
-
-/* hero */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-/* otsikot */
-.hero h1 {
-    font-size: clamp(2.2rem, 5vw, 3rem);
-    color: #3b2068;
-    margin-bottom: 30px;
-}
-
-/* teksti */
-.hero p {
-    font-size: 1.2rem;
-    color: #5a4080;
-    margin-bottom: 16px;
-}
-
-.subtext {
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-/* infokortti */
-.info-card {
-    max-width: 420px;
-    margin: 0 auto;
-    background-color: #f6f0ff !important;
-    border-radius: 16px !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
-    text-align: left;
-}
-
-/* typografia kortissa */
-.info-card .MuiTypography-root {
-    color: #3b2068;
-    font-size: 1rem;
-}
-
-/* kuva vasemmassa alareunassa */
-.bottom-image-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-    z-index: 9999;
-}
-
-.bottom-image {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* otsikko kortissa */
-.info-card .MuiTypography-h6 {
-    font-size: 1.2rem;
-    margin-bottom: 4px;
-}
-
-/* omistajalista */
-.owners {
-    line-height: 1.6;
-}
-
-/* DataGrid-tuotelista */
-.product-grid {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #f6f0ff !important;
-    border-radius: 16px !important;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
-}
-
-.product-grid h2 {
-    color: #3b2068;
-    font-size: 1.8rem;
 }
 
 /* ========================= */
-/* UUSI CATEGORIES LAYOUT */
+/* HERO (uusi moderni) */
+/* ========================= */
+
+.hero-modern {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: #3b2068;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #5a4080;
+    margin-bottom: 30px;
+}
+
+/* CTA nappi */
+.cta-button {
+    display: inline-block;
+    background-color: #bfa8e6;
+    color: #3b2068;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #a78cd9;
+}
+
+/* hero kuva */
+.hero-image {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* ========================= */
+/* KAMPANJA */
+/* ========================= */
+
+.campaign-section {
+    margin: 60px auto;
+    max-width: 900px;
+    background-color: #f6f0ff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+}
+
+.campaign-section img {
+    width: 150px;
+    height: auto;
+}
+
+.campaign-text h2 {
+    color: #3b2068;
+    margin-bottom: 10px;
+}
+
+.campaign-text p {
+    color: #5a4080;
+    margin-bottom: 10px;
+}
+
+.campaign-link {
+    color: #7a5cc2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.campaign-link:hover {
+    text-decoration: underline;
+}
+
+/* ========================= */
+/* KATEGORIAT */
 /* ========================= */
 
 .categories-page {
@@ -130,12 +139,11 @@
 }
 
 .categories-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #3b2068;
     margin-bottom: 40px;
 }
 
-/* Grid */
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -144,7 +152,6 @@
     margin: 0 auto;
 }
 
-/* Kortti */
 .category-card {
     position: relative;
     display: block;
@@ -154,20 +161,17 @@
     text-decoration: none;
 }
 
-/* Kuva */
 .category-card img {
     width: 100%;
-    height: 400px;
+    height: 350px;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-/* Hover zoom */
 .category-card:hover img {
     transform: scale(1.08);
 }
 
-/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
@@ -182,56 +186,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease;
 }
 
-/* Hover overlay */
-.category-card:hover .overlay {
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.75),
-        rgba(0,0,0,0.2)
-    );
-}
-
-/* Teksti */
 .overlay span {
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 1px;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* ========================= */
-/* DataGrid tyylit */
-/* ========================= */
-
-.product-grid .MuiDataGrid-columnHeaders {
-    background-color: #d6c6f0 !important;
-    border-radius: 8px 8px 0 0 !important;
+html {
+    scroll-behavior: smooth;
 }
 
-.product-grid .MuiDataGrid-columnHeaderTitle {
-    color: #3b2068 !important;
-    font-weight: 600 !important;
-    font-size: 1rem !important;
-}
-
-.product-grid .MuiDataGrid-cell {
-    color: #3b2068 !important;
-    border-color: #e0d4f5 !important;
-}
-
-.product-grid .MuiDataGrid-row:hover {
-    background-color: #f0e8ff !important;
-}
-
-.product-grid .MuiDataGrid-row:nth-of-type(even) {
-    background-color: #f8f4fc !important;
-}
-
-.product-grid .MuiDataGrid-footerContainer {
-    background-color: #d6c6f0 !important;
-    border-radius: 0 0 8px 8px !important;
-}
