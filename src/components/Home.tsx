@@ -1,43 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import "./Home.css";
 
 function Home() {
   return (
-    <>
-      <AppBar position="static">
+    <div className="home-container">
+
+      {/* Yläpalkki */}
+      <AppBar position="static" className="appbar">
         <Toolbar className="toolbar">
-          <Typography variant="h6">
-            🐶 Pikku Mussukan koiratarvike
+
+          <Typography className="logo">
+            Pikku Mussukan koiratarvike
           </Typography>
 
-          <div className="nav-buttons">
-            <Button color="inherit" component={Link} to="/categories">
-              Tuotteet
-            </Button>
-
-            <Button color="inherit" component={Link} to="/company">
-              Meistä
-            </Button>
+          <div className="nav-links">
+            <Link to="/categories">Tuotteet</Link>
+            <Link to="/company">Meistä</Link>
           </div>
+
         </Toolbar>
       </AppBar>
 
-      <Box className="home-container">
-        <Typography variant="h4" gutterBottom>
-          Tervetuloa
-        </Typography>
+      {/* Sisältö */}
+      <Box className="hero">
+        <h1>Pikku Mussukan koiratarvike</h1>
 
-        <Typography sx={{ marginBottom: 2 }}>
-          Täältä löydät kaikkea kivaa karvaiselle kaverillesi, leluista herkkuihin ja vaatteisiin!
-        </Typography>
+        <p>
+          Kaikkea ihanaa karvaiselle ystävällesi: leluja, herkkuja ja suloisia asusteita.
+        </p>
 
-        <Typography>
-          Valitse ylhäältä mitä haluat selailla.
-        </Typography>
+        <p className="subtext">
+          Valitse ylhäältä mitä haluat tutkia.
+        </p>
       </Box>
-    </>
+
+    </div>
   );
 }
 
