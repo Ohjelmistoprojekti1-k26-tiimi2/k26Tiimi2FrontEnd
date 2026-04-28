@@ -44,7 +44,19 @@ function Navbar() {
             </MenuItem>
 
             <MenuItem component={Link} to="/categories" onClick={handleClose}>
-              Tuotteet
+              Valikoima
+            </MenuItem>
+
+            <MenuItem component={Link} to="/toys" onClick={handleClose}>
+              Lelut
+            </MenuItem>
+
+            <MenuItem component={Link} to="/foods" onClick={handleClose}>
+              Koiranruoat
+            </MenuItem>
+
+            <MenuItem component={Link} to="/clothes" onClick={handleClose}>
+              Vaatteet
             </MenuItem>
 
             <MenuItem component={Link} to="/company" onClick={handleClose}>

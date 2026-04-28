@@ -31,7 +31,7 @@ function FoodList() {
         getRowId={(row: any) => row._links.self.href}
         autoHeight
         pageSize={10}
-        rowsPerPageOptions={[]}
+        rowsPerPageOptions={[10]}
         localeText={{
           noRowsLabel: 'Ei tuotteita',
           footerRowSelected: (count) => `${count} rivi(ä) valittu`
