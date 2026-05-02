@@ -15,6 +15,7 @@ import InfoIcon from "@mui/icons-material/Info";
 
 import { Link } from "react-router-dom";
 import "./Home.css";
+import logo from "../assets/pikkumussukkalogo-removebg-preview.png";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -58,9 +59,13 @@ function Navbar() {
     >
       <Toolbar className="topbar-toolbar">
 
-        <Typography className="logo">
-          Pikkumussukan koiratarvike
-        </Typography>
+        <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+          <img 
+            src={logo} 
+            alt="Pikkumussukan koiratarvike" 
+            style={{ height: "130px", marginRight: "12px", cursor: "pointer" }}
+          />
+        </Link>
 
         <Box
           onMouseEnter={handleOpen}
