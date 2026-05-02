@@ -1,11 +1,8 @@
 export type ProductData = {
+  productId: number;
   name: string;
   price: number;
-  description: string;
-  _links: {
-    self: { href: string };
-    product: { href: string };
-  };
+  productType?: string;
 };
 
-export type Product = Omit<ProductData, "_links">;
+export type Product = ProductData;

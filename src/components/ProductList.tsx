@@ -10,14 +10,13 @@ function ProductList() {
   const columns: GridColDef[] = [
     { field: "name", headerName: "Name", width: 200 },
     { field: "price", headerName: "Price (€)", width: 150 },
-    { field: "description", headerName: "Description", width: 300 }
+    { field: "productType", headerName: "Type", width: 150 }
   ];
 
   const getProducts = () => {
     fetchProducts()
       .then(data => {
-        // Hyödynnetty saman logiikan rakennetta, kuin Frontend-kurssilla
-        setProducts(data._embedded.products);
+        setProducts(data);
       })
       .catch(err => console.error(err));
   };
@@ -31,7 +30,7 @@ function ProductList() {
       <DataGrid
         columns={columns}
         rows={products}
-        getRowId={(row) => row._links.self.href}
+        getRowId={(row) => row.productId}
         autoPageSize
       />
     </div>

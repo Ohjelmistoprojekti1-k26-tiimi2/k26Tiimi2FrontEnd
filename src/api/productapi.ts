@@ -21,3 +21,11 @@ export const fetchClothes = () => {
       return res.json();
     });
 };
+
+export const fetchProducts = () => {
+  return fetch(import.meta.env.VITE_API_URL + "/products")
+    .then(res => {
+      if (!res.ok) throw new Error("Virhe tuotteiden haussa");
+      return res.json();
+    });
+};
