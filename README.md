@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+# Pikkumussukan koiratarvike: Ohjelmistoprojekti 1 -kurssin ryhmä kakkosen projektin Front End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tämä on Reactilla, TypeScriptillä ja MUI-kirjastolla luotu käyttöliittymä koiratarvikkeita myyvälle yritykselle. Sovellus käyttää ryhmä 2:sen backend tiimin luomaa REST APIa, johon tallennetaan tuote- ja valmistajatietoja.
 
-Currently, two official plugins are available:
+## Käytetyt teknologiat
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React, TypeScript, MUI, DataGrid, Vite
 
-## React Compiler
+## Versionhallinta ja tekijät
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Projektissa käytetään Git-versionhallintaa. Projektimme Front End -osuudesta ovat olleet päävastuussa Nadja Lyyra ja Peppi Vine. Moni osa on tehty parikoodauksena, eli kommitointihistoriasta ei voi suoranaisesti päätellä, kuka on tehnyt mitäkin. Ohjelma tehtiin yhteistyönä.
 
-## Expanding the ESLint configuration
+## Toiminnallisuudet
+Sovellukseen on toteutettu:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Tuotelistat, yrityksen tiedot -sivu ja navigaatio sivujen välillä.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Tuotesivulla on:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- taulukkomuotoinen DataGrid-näkymä
+- tietojen haku REST APIsta
+- sarakkeiden järjestely ja suodatus eri kenttien perusteella
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Front end -osuudessa olemme panostaneet eritoten käytettävyyteen ja ulkoasuun.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Julkaisu
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Sovellus on julkaistu myös GitHub Pages -palvelussa ja sitä voi käyttää selaimessa ilman paikallista asennusta.
