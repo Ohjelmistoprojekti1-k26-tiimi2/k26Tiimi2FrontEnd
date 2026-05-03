@@ -1,19 +1,24 @@
+// IMPORTIT
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import Navbar from "./Navbar";
 import "./CompanyInfo.css";
 
+// YRITYSTIETOSIVUN KOMPONENTTI - NÄYTTÄÄ YRITYKSEN PERUSTIEDOT
 function CompanyInfo() {
   return (
     <div className="company-info-container">
 
       <Navbar />
 
+      {/* HERO-OSIO - SIVUN PÄÄOTSIKKO */}
       <Box className="company-hero">
         <h1>Yrityksen tiedot</h1>
 
+        {/* KORTTI JOSSA KAIKKI YRITYSTIEDOT */}
         <Card className="info-card">
           <CardContent>
 
+            {/* YRITYKSEN NIMI */}
             <Typography variant="h6" className="section-title">
               Yrityksen nimi
             </Typography>
@@ -22,6 +27,7 @@ function CompanyInfo() {
               Pikkumussukan koiratarvike
             </Typography>
 
+            {/* OMISTAJAT */}
             <Typography className="section-title">
               Omistajat:
             </Typography>
@@ -34,6 +40,7 @@ function CompanyInfo() {
               Arttu Inkala
             </Typography>
 
+            {/* PERUSTAMISVUOSI */}
             <Typography className="section-title">
               Perustamisvuosi:
             </Typography>
@@ -42,6 +49,7 @@ function CompanyInfo() {
               2026
             </Typography>
 
+            {/* Y-TUNNUS */}
             <Typography className="section-title">
               Y-tunnus:
             </Typography>

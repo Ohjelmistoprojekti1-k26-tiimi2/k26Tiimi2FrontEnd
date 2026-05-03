@@ -1,3 +1,7 @@
+/* ========================= */
+/* PÄÄTYYLITIEDOSTO - POISTAA OLETUSMARGINAALIT JA PADDINGIT */
+/* ========================= */
+
 html, body {
     margin: 0;
     padding: 0;

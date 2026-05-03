@@ -1,3 +1,4 @@
+// IMPORTIT
 import { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
@@ -5,9 +6,12 @@ import { fetchClothes } from "../../api/productapi";
 import Navbar from "../Navbar";
 import "../ProductList.css";
 
+// VAATTEIDEN LISTAN KOMPONENTTI - NÄYTTÄÄ KAIKKI VAATTEET TAULUKOSSA
 function ClothesList() {
+  // VAATTEIDEN TILA
   const [clothes, setClothes] = useState([]);
 
+  // DATAGRID:IN SARAKKEIDEN MÄÄRITYS (NIMI, HINTA, KOKO, VÄRI)
   const columns: GridColDef[] = [
     { field: "name", headerName: "Nimi", width: 200 },
     { field: "price", headerName: "Hinta (€)", width: 150 },
@@ -15,6 +19,7 @@ function ClothesList() {
     { field: "color", headerName: "Väri", width: 150 }
   ];
 
+  // KOMPONENTIN LATAUTUESSA HAETAAN VAATTEET PALVELIMELTA
   useEffect(() => {
     fetchClothes()
       .then(data => setClothes(data._embedded.clothes))
@@ -28,6 +33,7 @@ function ClothesList() {
       <div className="product-grid">
         <h2>Vaatteet</h2>
 
+        {/* DATAGRID - TAULUKKO VAATTEILLE */}
         <DataGrid
           rows={clothes}
           columns={columns}

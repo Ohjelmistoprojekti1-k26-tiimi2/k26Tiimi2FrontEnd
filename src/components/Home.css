@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 
 /* ========================= */
-/* GLOBAL RESET */
+/* GLOBAL RESET - ALUSTETAAN TYHJÄT MARGINAALIT JA PADDINGT */
 /* ========================= */
 
 html, body, #root {
@@ -11,7 +11,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* HOME CONTAINER */
+/* HOME CONTAINER - PÄÄSÄILIÖ JOSSA KAIKKI ETUSIVUN SISÄLTÖ */
 /* ========================= */
 
 .home-container {
@@ -23,7 +23,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* NAVBAR */
+/* NAVBAR - YLÄREUNAN NAVIGAATIOPALKKI */
 /* ========================= */
 
 .topbar {
@@ -52,7 +52,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* HERO */
+/* HERO - ETUSIVUN PÄÄBANNERI TERVETULIASVIESTILLÄ JA KUVA */
 /* ========================= */
 
 .hero-modern {
@@ -96,7 +96,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* HERO IMAGE (eli etusivun koirajengi) */
+/* HERO-KUVA - ETUSIVUN KOIRAJENGI */
 /* ========================= */
 
 .hero-image {
@@ -106,7 +106,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* CAMPAIGN */
+/* KAMPANJA - PROMOTIIVINEN BANNERI (PEDIGREE) */
 /* ========================= */
 
 .campaign-section {
@@ -148,7 +148,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* CATEGORIES */
+/* KATEGORIAT - TUOTELUOKAT (LELUT, VAATTEET, RUOKA) */
 /* ========================= */
 
 .categories-page {
@@ -213,7 +213,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* SCROLL */
+/* SMOOTHSCROLL */
 /* ========================= */
 
 html {

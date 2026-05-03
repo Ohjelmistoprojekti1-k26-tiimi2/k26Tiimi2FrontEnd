@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
 
 /* ========================= */
-/* RESET */
+/* RESET - POISTAA OLETUSTYYLITYKSET */
 /* ========================= */
 
 html, body, #root {
@@ -11,7 +11,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* PRODUCT PAGE */
+/* TUOTTEIDEN SIVU - PÄÄCONTAINER */
 /* ========================= */
 
 .product-page {
@@ -29,7 +29,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* TITLE (ISOMPI + MODERNI) */
+/* OTSIKKO - SIVUN PÄÄOTSIKKO */
 /* ========================= */
 
 .product-page h2 {
@@ -41,7 +41,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* GRID CONTAINER */
+/* RUUDUKKO - DATAGRID:IN SÄILÖ */
 /* ========================= */
 
 .product-grid {
@@ -58,7 +58,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* DATA GRID BASE */
+/* DATAGRID:IN PERUSTYYLITYS */
 /* ========================= */
 
 .MuiDataGrid-root {
@@ -68,7 +68,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* HEADER (selkeä verkkokauppa-header) */
+/* DATAGRID:IN SARAKKEEN OTSIKOT */
 /* ========================= */
 
 .MuiDataGrid-columnHeaders {
@@ -79,7 +79,7 @@ html, body, #root {
 }
 
 /* ========================= */
-/* CELLS */
+/* DATAGRID:IN SOLUT */
 /* ========================= */
 
 .MuiDataGrid-cell {
@@ -87,13 +87,13 @@ html, body, #root {
     font-size: 1rem;
 }
 
-/* hover-efekti */
+/* HOVER-EFEKTI RIVEILLÄ */
 .MuiDataGrid-row:hover {
     background-color: rgba(59, 32, 104, 0.05);
 }
 
 /* ========================= */
-/* EMPTY STATE */
+/* TYHJÄ TILA - TEKSTI KUN EI TUOTTEITA */
 /* ========================= */
 
 .MuiDataGrid-overlay {

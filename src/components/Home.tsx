@@ -1,3 +1,4 @@
+// IMPORTIT
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
@@ -9,10 +10,12 @@ import ruokakuva from "../assets/ruoka.webp";
 import lelukuvat from "../assets/lelu.webp";
 import "./Home.css";
 
+// ETUSIVUKOMPONENTTI: NÄYTTÄÄ HERO-BANNERIN, KAMPANJAT JA TUOTELUOKAT
 function Home() {
-  // referenssi kategorioihin
+  // REFERENSSI KATEGORIOIDEN OSIOON (KÄYTETÄÄN SMOOTH SCROLLAUKSEEN)
   const categoriesRef = useRef<HTMLDivElement | null>(null);
 
+  // FUNKTIO JOKA SCROLLAA SIVULLA KATEGORIOIHIN
   const scrollToCategories = () => {
     categoriesRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -22,7 +25,7 @@ function Home() {
 
       <Navbar />
 
-      {/* HERO */}
+      {/* HERO-OSIO - ETUSIVUN PÄÄBANNERI TERVETULIASVIESTILLÄ JA KUVA */}
       <Box className="hero-modern">
         <div className="hero-text">
           <h1>Pikkumussukan koiratarvike</h1>
@@ -30,7 +33,7 @@ function Home() {
             Suloiset asusteet, herkkuruoat ja hullunhauskat lelut. Meiltä löytyy kaikki, mitä pikkumussukkasi voisi tarvita!
           </p>
 
-          {/* 🔽 MUUTOS: ei enää Link vaan scroll */}
+          {/* NAPPI JOKA SCROLLAA ALAS TUOTEKATEGORIOIHIN */}
           <button onClick={scrollToCategories} className="cta-button">
             Selaa tuotteita
           </button>
@@ -43,7 +46,7 @@ function Home() {
         />
       </Box>
 
-      {/* KAMPANJA */}
+      {/* KAMPANJA-OSIO - NÄYTTÄÄ PROMOTIIVISEN BANNERIN (ESIM. FEIKKI PEDIGREE TARJOUS) */}
       <div className="campaign-section">
         <img src={pedigree} alt="Pedigree" />
 
@@ -53,18 +56,21 @@ function Home() {
             Senioriruoat tarjouksessa toukokuun loppuun saakka.
           </p>
 
+          {/* LINKKI JOKA VIE RUOKA-KATEGORIAAN */}
           <Link to="/foods" className="campaign-link">
             Siirry selaamaan ruokia →
           </Link>
         </div>
       </div>
 
-      {/* KATEGORIAT */}
+      {/* KATEGORIAT-OSIO - NÄYTTÄÄ KOLME TUOTELUOKKAA (LELUT, VAATTEET, RUOKA) */}
       <div ref={categoriesRef} className="categories-page">
         <h2 className="categories-title">Tutustu valikoimaan</h2>
 
+        {/* KATEGORIOIDEN RUUDUKKO */}
         <div className="categories-grid">
 
+          {/* LELUT-KATEGORIA */}
           <Link to="/toys" className="category-card">
             <img src={lelukuvat} alt="Lelut" />
             <div className="overlay">
@@ -72,6 +78,7 @@ function Home() {
             </div>
           </Link>
 
+          {/* VAATTEET-KATEGORIA */}
           <Link to="/clothes" className="category-card">
             <img src={hupparikuva} alt="Vaatteet" />
             <div className="overlay">
@@ -79,6 +86,7 @@ function Home() {
             </div>
           </Link>
 
+          {/* RUOKA-KATEGORIA */}
           <Link to="/foods" className="category-card">
             <img src={ruokakuva} alt="Koiranruoat" />
             <div className="overlay">

@@ -1,8 +1,8 @@
+// IMPORTIT
 import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
   Menu,
   MenuItem,
   Box,
@@ -10,6 +10,7 @@ import {
   Divider
 } from "@mui/material";
 
+// MUI-IMPORTIT
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 
@@ -17,17 +18,22 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import logo from "../assets/pikkumussukkalogo-removebg-preview.png";
 
+// NAVBAR-KOMPONENTTI ELI YLÄPALKKI
 function Navbar() {
+  // TILA VALIKKOJEN AVAAMIS/SULKEMISTA VARTEN
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
+  // AVAA VALIKON HIIREN LIIKKUESSA
   const handleOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
+  // SULKEE VALIKON
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  // VALIKON KIRJOITUSTEN TYYLITYS
   const menuItemStyles = {
     minWidth: 220,
     px: 2.5,
@@ -37,6 +43,7 @@ function Navbar() {
     },
   };
 
+  // OSIOIDEN OTSIKOIDEN TYYLITYS (ESIM. "TUOTTEET")
   const sectionHeaderStyles = {
     fontSize: "0.75rem",
     fontWeight: 700,
@@ -59,6 +66,7 @@ function Navbar() {
     >
       <Toolbar className="topbar-toolbar">
 
+        {/* LOGO - LINKKI ETUSIVULLE */}
         <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
           <img 
             src={logo} 
@@ -67,6 +75,7 @@ function Navbar() {
           />
         </Link>
 
+        {/* MENU-NAPPI JA AVAUTUVA VALIKKO */}
         <Box
           onMouseEnter={handleOpen}
           onMouseLeave={handleClose}
@@ -77,6 +86,7 @@ function Navbar() {
         >
           Menu
 
+          {/* AVAUTUVA VALIKKO */}
           <Menu
             anchorEl={anchorEl}
             open={Boolean(anchorEl)}
@@ -98,6 +108,7 @@ function Navbar() {
             }}
           >
 
+            {/* ETUSIVU-LINKKI */}
             <MenuItem component={Link} to="/" onClick={handleClose} sx={menuItemStyles}>
               <ListItemIcon sx={{ minWidth: 40 }}>
                 <HomeIcon fontSize="small" />
@@ -107,22 +118,27 @@ function Navbar() {
 
             <Divider sx={{ my: 1 }} />
 
+            {/* TUOTTEET-OSION OTSIKKO */}
             <Box sx={sectionHeaderStyles}>Tuotteet</Box>
 
+            {/* LELUT-LINKKI */}
             <MenuItem component={Link} to="/toys" onClick={handleClose} sx={menuItemStyles}>
               Lelut
             </MenuItem>
 
+            {/* KOIRANRUOAT-LINKKI */}
             <MenuItem component={Link} to="/foods" onClick={handleClose} sx={menuItemStyles}>
               Koiranruoat
             </MenuItem>
 
+            {/* VAATTEET-LINKKI */}
             <MenuItem component={Link} to="/clothes" onClick={handleClose} sx={menuItemStyles}>
               Vaatteet
             </MenuItem>
 
             <Divider sx={{ my: 1 }} />
 
+            {/* YRITYSTIETOSIVU-LINKKI */}
             <MenuItem component={Link} to="/company" onClick={handleClose} sx={menuItemStyles}>
               <ListItemIcon sx={{ minWidth: 40 }}>
                 <InfoIcon fontSize="small" />
