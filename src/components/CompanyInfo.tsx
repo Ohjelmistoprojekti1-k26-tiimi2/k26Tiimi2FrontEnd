@@ -2,6 +2,7 @@
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import Navbar from "./Navbar";
 import "./CompanyInfo.css";
+import kultaisetnoutajat from "../assets/pennut.webp";
 
 // YRITYSTIETOSIVUN KOMPONENTTI - NÄYTTÄÄ YRITYKSEN PERUSTIEDOT
 function CompanyInfo() {
@@ -61,6 +62,11 @@ function CompanyInfo() {
           </CardContent>
         </Card>
       </Box>
+
+      {/* PENTUJEN KUVA OIKEASSA ALANURKASSA */}
+      <div className="decorative-image">
+        <img src={kultaisetnoutajat} alt="Pennut" />
+      </div>
 
     </div>
   );
