@@ -3,19 +3,21 @@ import { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import { fetchClothes } from "../../api/productapi";
+import type { Clothing } from "../../types";
 import Navbar from "../Navbar";
 import "../ProductList.css";
 
 // VAATTEIDEN LISTAN KOMPONENTTI - NÄYTTÄÄ KAIKKI VAATTEET TAULUKOSSA
 function ClothesList() {
   // VAATTEIDEN TILA
-  const [clothes, setClothes] = useState([]);
+  const [clothes, setClothes] = useState<Clothing[]>([]);
 
-  // DATAGRID:IN SARAKKEIDEN MÄÄRITYS (NIMI, HINTA, KOKO, VÄRI)
+  // DATAGRID:IN SARAKKEIDEN MÄÄRITYS
   const columns: GridColDef[] = [
     { field: "name", headerName: "Nimi", width: 200 },
-    { field: "price", headerName: "Hinta (€)", width: 150 },
-    { field: "size", headerName: "Koko", width: 100 },
+    { field: "price", headerName: "Hinta (€)", width: 120 },
+    { field: "manufacturer", headerName: "Valmistaja", width: 180 },
+    { field: "size", headerName: "Koko", width: 120 },
     { field: "color", headerName: "Väri", width: 150 }
   ];
 

@@ -3,19 +3,22 @@ import { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import { fetchToys } from "../../api/productapi";
+import type { Toy } from "../../types";
 import Navbar from "../Navbar";
 import "../ProductList.css";
 
 // LELUJEN LISTAN KOMPONENTTI - NÄYTTÄÄ KAIKKI LELUT TAULUKOSSA
 function ToyList() {
   // LELUJEN TILA
-  const [toys, setToys] = useState([]);
+  const [toys, setToys] = useState<Toy[]>([]);
 
-  // DATAGRID:IN SARAKKEIDEN MÄÄRITYS (NIMI, HINTA, IKÄSUOSITUS)
+  // DATAGRID:IN SARAKKEIDEN MÄÄRITYS
   const columns: GridColDef[] = [
     { field: "name", headerName: "Nimi", width: 200 },
-    { field: "price", headerName: "Hinta (€)", width: 150 },
-    { field: "ageRecommendation", headerName: "Ikäsuositus", width: 150 }
+    { field: "price", headerName: "Hinta (€)", width: 120 },
+    { field: "manufacturer", headerName: "Valmistaja", width: 180 },
+    { field: "toyType", headerName: "Lelun tyyppi", width: 160 },
+    { field: "toySize", headerName: "Lelun koko", width: 140 }
   ];
 
   // KOMPONENTIN LATAUTUESSA HAETAAN LELUT PALVELIMELTA

@@ -3,19 +3,22 @@ import { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import { fetchFoods } from "../../api/productapi";
+import type { Food } from "../../types";
 import Navbar from "../Navbar";
 import "../ProductList.css";
 
 // RUOAN LISTAN KOMPONENTTI - NÄYTTÄÄ KAIKKI KOIRANRUOAT TAULUKOSSA
 function FoodList() {
   // RUOAN TILA
-  const [foods, setFoods] = useState([]);
+  const [foods, setFoods] = useState<Food[]>([]);
 
-  // DATAGRID:IN SARAKKEIDEN MÄÄRITYS (NIMI, HINTA, PAINO)
+  // DATAGRID:IN SARAKKEIDEN MÄÄRITYS
   const columns: GridColDef[] = [
     { field: "name", headerName: "Nimi", width: 200 },
-    { field: "price", headerName: "Hinta (€)", width: 150 },
-    { field: "weight", headerName: "Paino (kg)", width: 150 }
+    { field: "price", headerName: "Hinta (€)", width: 120 },
+    { field: "manufacturer", headerName: "Valmistaja", width: 180 },
+    { field: "foodType", headerName: "Ruuan tyyppi", width: 160 },
+    { field: "dogAge", headerName: "Koiran ikä", width: 150 }
   ];
 
   // KOMPONENTIN LATAUTUESSA HAETAAN RUOAT PALVELIMELTA
