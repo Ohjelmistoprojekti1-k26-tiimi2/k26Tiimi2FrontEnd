@@ -10,6 +10,7 @@ export const fetchToys = () => {
 
 // HAETAAN RUOAT PALVELIMESTA
 export const fetchFoods = () => {
+  console.log("API:", import.meta.env.VITE_API_URL);
   return fetch(import.meta.env.VITE_API_URL + "/foods")
     .then(res => {
       // TARKISTETAAN ONKO PYYNTÖ ONNISTUNUT

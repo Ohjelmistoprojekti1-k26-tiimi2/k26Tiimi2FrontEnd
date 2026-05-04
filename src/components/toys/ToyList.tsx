@@ -21,7 +21,7 @@ function ToyList() {
   // KOMPONENTIN LATAUTUESSA HAETAAN LELUT PALVELIMELTA
   useEffect(() => {
     fetchToys()
-      .then(data => setToys(data._embedded.toys))
+      .then(data => setToys(data))
       .catch(err => console.error(err));
   }, []);
 
@@ -36,7 +36,7 @@ function ToyList() {
         <DataGrid
           rows={toys}
           columns={columns}
-          getRowId={(row: any) => row._links.self.href}
+          getRowId={(row: any) => row.productId}
           autoHeight
           paginationModel={{ pageSize: 10, page: 0 }}
           pageSizeOptions={[10]}

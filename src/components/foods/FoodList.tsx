@@ -21,7 +21,7 @@ function FoodList() {
   // KOMPONENTIN LATAUTUESSA HAETAAN RUOAT PALVELIMELTA
   useEffect(() => {
     fetchFoods()
-      .then(data => setFoods(data._embedded.foods))
+      .then(data => setFoods(data))
       .catch(err => console.error(err));
   }, []);
 
@@ -36,7 +36,7 @@ function FoodList() {
         <DataGrid
           rows={foods}
           columns={columns}
-          getRowId={(row: any) => row._links.self.href}
+          getRowId={(row: any) => row.productId}
           autoHeight
           paginationModel={{ pageSize: 10, page: 0 }}
           pageSizeOptions={[10]}

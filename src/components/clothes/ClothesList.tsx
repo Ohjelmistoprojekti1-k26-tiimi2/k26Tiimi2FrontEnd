@@ -22,7 +22,7 @@ function ClothesList() {
   // KOMPONENTIN LATAUTUESSA HAETAAN VAATTEET PALVELIMELTA
   useEffect(() => {
     fetchClothes()
-      .then(data => setClothes(data._embedded.clothes))
+      .then(data => setClothes(data))
       .catch(err => console.error(err));
   }, []);
 
@@ -37,7 +37,7 @@ function ClothesList() {
         <DataGrid
           rows={clothes}
           columns={columns}
-          getRowId={(row: any) => row._links.self.href}
+          getRowId={(row: any) => row.productId}
           autoHeight
           paginationModel={{ pageSize: 10, page: 0 }}
           pageSizeOptions={[10]}
