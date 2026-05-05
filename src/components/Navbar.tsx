@@ -16,7 +16,7 @@ import InfoIcon from "@mui/icons-material/Info";
 
 import { Link } from "react-router-dom";
 import "./Home.css";
-import logo from "../assets/pikkumussukkalogo-removebg-preview.png";
+import logo from "../assets/pikkumussukkalogo.png";
 
 // NAVBAR-KOMPONENTTI ELI YLÄPALKKI
 function Navbar() {
