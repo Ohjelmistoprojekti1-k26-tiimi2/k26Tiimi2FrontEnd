@@ -16,7 +16,7 @@ function ToyList() {
   const columns: GridColDef[] = [
     { field: "name", headerName: "Nimi", width: 200 },
     { field: "price", headerName: "Hinta (€)", width: 120 },
-    { field: "manufacturer", headerName: "Valmistaja", width: 180 },
+    { field: "manufacturerName", headerName: "Valmistaja", width: 180, renderCell: (params) => <span>{params.row.manufacturer?.mname ?? params.row.manufacturer ?? ''}</span> },
     { field: "toyType", headerName: "Lelun tyyppi", width: 160 },
     { field: "toySize", headerName: "Lelun koko", width: 140 }
   ];
