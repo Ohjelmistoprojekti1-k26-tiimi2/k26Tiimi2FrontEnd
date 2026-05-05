@@ -26,3 +26,4 @@ Front end -osuudessa olemme panostaneet eritoten käytettävyyteen ja ulkoasuun.
 ## Julkaisu
 
 Sovellus on julkaistu myös GitHub Pages -palvelussa ja sitä voi käyttää selaimessa ilman paikallista asennusta.
+https://ohjelmistoprojekti1-k26-tiimi2.github.io/k26Tiimi2FrontEnd/
