@@ -11,37 +11,66 @@ import "./ProductList.css";
 function ManufacturerView() {
     const [query, setQuery] = useState("");
     const [products, setProducts] = useState<any[]>([]);
+    const [allProducts, setAllProducts] = useState<any[]>([]);
     const [manufacturers, setManufacturers] = useState<string[]>([]);
-    const [searched, setSearched] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const columns: GridColDef[] = [
         { field: "name", headerName: "Nimi", width: 200 },
-        { field: "price", headerName: "Hinta (€)", width: 120 },
-        { field: "productType", headerName: "Tuotetyyppi", width: 160 },
+        { field: "price", headerName: "Hinta (€)", width: 110 },
+        { field: "productType", headerName: "Tuotetyyppi", width: 130 },
+        {
+            field: "manufacturer",
+            headerName: "Valmistaja",
+            width: 150,
+            valueGetter: (value: any) =>
+                value && typeof value === "object" ? value.mname : (value ?? ""),
+        },
+        {
+            field: "lisatiedot",
+            headerName: "Lisätiedot",
+            width: 250,
+            valueGetter: (_value: any, row: any) => {
+                const type = row.productType?.toLowerCase() ?? "";
+                if (type === "clothing" || type === "vaate") {
+                    return [row.clothingSize, row.color].filter(Boolean).join(" · ");
+                }
+                if (type === "toy" || type === "lelu") {
+                    return [row.toyType, row.toySize].filter(Boolean).join(" · ");
+                }
+                if (type === "food" || type === "ruoka") {
+                    return [row.foodType, row.dogAge].filter(Boolean).join(" · ");
+                }
+                return "";
+            },
+        },
     ];
 
-    // HAETAAN KAIKKI VALMISTAJAT SIVUN LATAUTUESSA
+    // HAETAAN KAIKKI TUOTTEET JA VALMISTAJAT SIVUN LATAUTUESSA
     useEffect(() => {
+        setLoading(true);
         fetchProducts().then(data => {
+            setAllProducts(data);
+            setProducts(data);
             const names: string[] = data
                 .map((p: any) =>
                     typeof p.manufacturer === "object" ? p.manufacturer?.mname : p.manufacturer
                 )
                 .filter(Boolean);
             setManufacturers([...new Set<string>(names)].sort());
-        }).catch(err => console.error(err));
+        }).catch(err => console.error(err))
+            .finally(() => setLoading(false));
     }, []);
 
     const handleSearch = (name: string) => {
         setQuery(name);
-        if (!name) return;
+        if (!name) {
+            setProducts(allProducts);
+            return;
+        }
         setLoading(true);
         fetchByManufacturer(name)
-            .then(data => {
-                setProducts(data);
-                setSearched(true);
-            })
+            .then(data => setProducts(data))
             .catch(err => console.error(err))
             .finally(() => setLoading(false));
     };
@@ -62,6 +91,7 @@ function ManufacturerView() {
                             label="Valitse valmistaja"
                             onChange={e => handleSearch(e.target.value)}
                         >
+                            <MenuItem value="">Kaikki valmistajat</MenuItem>
                             {manufacturers.map(mname => (
                                 <MenuItem key={mname} value={mname}>{mname}</MenuItem>
                             ))}
@@ -70,21 +100,19 @@ function ManufacturerView() {
                 </Box>
 
                 {/* TULOSTAULUKKO */}
-                {searched && (
-                    <DataGrid
-                        rows={products}
-                        columns={columns}
-                        getRowId={(row: any) => row.productId}
-                        autoHeight
-                        loading={loading}
-                        paginationModel={{ pageSize: 10, page: 0 }}
-                        pageSizeOptions={[10]}
-                        localeText={{
-                            noRowsLabel: "Ei tuotteita tällä valmistajalla",
-                            footerRowSelected: (count) => `${count} rivi(ä) valittu`
-                        }}
-                    />
-                )}
+                <DataGrid
+                    rows={products}
+                    columns={columns}
+                    getRowId={(row: any) => row.productId}
+                    autoHeight
+                    loading={loading}
+                    paginationModel={{ pageSize: 10, page: 0 }}
+                    pageSizeOptions={[10]}
+                    localeText={{
+                        noRowsLabel: "Ei tuotteita tällä valmistajalla",
+                        footerRowSelected: (count) => `${count} rivi(ä) valittu`
+                    }}
+                />
             </div>
         </div>
     );
