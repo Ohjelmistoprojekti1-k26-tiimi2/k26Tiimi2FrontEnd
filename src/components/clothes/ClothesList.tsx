@@ -16,8 +16,8 @@ function ClothesList() {
   const columns: GridColDef[] = [
     { field: "name", headerName: "Nimi", width: 200 },
     { field: "price", headerName: "Hinta (€)", width: 120 },
-    { field: "manufacturer", headerName: "Valmistaja", width: 180 },
-    { field: "size", headerName: "Koko", width: 120 },
+    { field: "manufacturer.mname", headerName: "Valmistaja", width: 180 },
+    { field: "clothingSize", headerName: "Koko", width: 120 },
     { field: "color", headerName: "Väri", width: 150 }
   ];
 

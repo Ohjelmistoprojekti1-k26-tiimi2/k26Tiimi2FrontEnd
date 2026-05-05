@@ -11,8 +11,8 @@ export type Product = ProductData;
 
 // VAATTEEN OMAT
 export type Clothing = ProductData & {
-  manufacturer: string;   // VALMISTAJA
-  size: string;           // KOKO
+  manufacturer.mname: string;   // VALMISTAJA
+  clothingSize: string;           // KOKO
   color: string;          // VÄRI
 };
 
