@@ -38,3 +38,15 @@ export const fetchProducts = () => {
       return res.json();
     });
 };
+
+// HAETAAN TUOTTEET VALMISTAJAN NIMEN MUKAAN SUODATTAMALLA
+export const fetchByManufacturer = (manufacturerName: string) => {
+  return fetchProducts().then(products =>
+    products.filter((p: any) => {
+      const mName = typeof p.manufacturer === "object"
+        ? p.manufacturer?.mname
+        : p.manufacturer;
+      return mName?.toLowerCase() === manufacturerName.toLowerCase();
+    })
+  );
+};

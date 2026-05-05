@@ -6,6 +6,7 @@ import CompanyInfo from "./components/CompanyInfo";
 import ToyList from "./components/toys/ToyList";
 import FoodList from "./components/foods/FoodList";
 import ClothesList from "./components/clothes/ClothesList";
+import ManufacturerView from "./components/ManufacturerView";
 
 // PÄÄKOMPONENTTI - MÄÄRITTÄÄ KAIKKI REITIT SOVELLUKSEEN
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <Route path="/foods" element={<FoodList />} />
         {/* VAATTEIDEN LISTAUS */}
         <Route path="/clothes" element={<ClothesList />} />
+        {/* VALMISTAJAN TUOTTEET */}
+        <Route path="/manufacturer" element={<ManufacturerView />} />
       </Routes>
     </BrowserRouter>
   );

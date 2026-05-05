@@ -68,9 +68,9 @@ function Navbar() {
 
         {/* LOGO - LINKKI ETUSIVULLE */}
         <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-          <img 
-            src={logo} 
-            alt="Pikkumussukan koiratarvike" 
+          <img
+            src={logo}
+            alt="Pikkumussukan koiratarvike"
             style={{ height: "130px", marginRight: "12px", cursor: "pointer" }}
           />
         </Link>
@@ -81,7 +81,7 @@ function Navbar() {
           onMouseLeave={handleClose}
           className="menu-text"
           sx={{
-            marginRight: "8px" 
+            marginRight: "8px"
           }}
         >
           Menu
@@ -91,7 +91,7 @@ function Navbar() {
             anchorEl={anchorEl}
             open={Boolean(anchorEl)}
             onClose={handleClose}
-            disableScrollLock 
+            disableScrollLock
             slotProps={{
               list: {
                 onMouseLeave: handleClose,
@@ -134,6 +134,11 @@ function Navbar() {
             {/* VAATTEET-LINKKI */}
             <MenuItem component={Link} to="/clothes" onClick={handleClose} sx={menuItemStyles}>
               Vaatteet
+            </MenuItem>
+
+            {/* VALMISTAJA HAKU -LINKKI */}
+            <MenuItem component={Link} to="/manufacturer" onClick={handleClose} sx={menuItemStyles}>
+              Kaikki tuotteet
             </MenuItem>
 
             <Divider sx={{ my: 1 }} />
