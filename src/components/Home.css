@@ -162,6 +162,11 @@ html, body, #root {
     margin-bottom: 40px;
 }
 
+.categories-title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
