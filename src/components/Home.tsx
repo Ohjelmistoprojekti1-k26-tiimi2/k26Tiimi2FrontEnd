@@ -90,9 +90,9 @@ function Home() {
 
           {/* RUOKA-KATEGORIA */}
           <Link to="/foods" className="category-card">
-            <img src={ruokakuva} alt="Koiranruoat" />
+            <img src={ruokakuva} alt="Ruoat" />
             <div className="overlay">
-              <span>Koiranruoat</span>
+              <span>Ruoat</span>
             </div>
           </Link>
 
