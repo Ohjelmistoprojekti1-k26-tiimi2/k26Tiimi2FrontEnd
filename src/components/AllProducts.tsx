@@ -7,8 +7,8 @@ import { fetchByManufacturer, fetchProducts } from "../api/productapi";
 import Navbar from "./Navbar";
 import "./ProductList.css";
 
-// VALMISTAJAN TUOTTEIDEN NÄKYMÄ
-function ManufacturerView() {
+// KAIKKI TUOTTEET -NÄKYMÄ
+function AllProducts() {
     const [query, setQuery] = useState("");
     const [products, setProducts] = useState<any[]>([]);
     const [allProducts, setAllProducts] = useState<any[]>([]);
@@ -119,4 +119,4 @@ function ManufacturerView() {
     );
 }
 
-export default ManufacturerView;
+export default AllProducts;

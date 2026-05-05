@@ -137,7 +137,7 @@ function Navbar() {
             </MenuItem>
 
             {/* VALMISTAJA HAKU -LINKKI */}
-            <MenuItem component={Link} to="/manufacturer" onClick={handleClose} sx={menuItemStyles}>
+            <MenuItem component={Link} to="/allproducts" onClick={handleClose} sx={menuItemStyles}>
               Kaikki tuotteet
             </MenuItem>
 

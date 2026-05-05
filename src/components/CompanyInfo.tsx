@@ -30,7 +30,7 @@ function CompanyInfo() {
 
             {/* OMISTAJAT */}
             <Typography className="section-title">
-              Omistajat:
+              Omistajat
             </Typography>
 
             <Typography className="owners">
@@ -40,7 +40,7 @@ function CompanyInfo() {
 
             {/* PERUSTAMISVUOSI */}
             <Typography className="section-title">
-              Perustamisvuosi:
+              Perustamisvuosi
             </Typography>
 
             <Typography>
@@ -49,12 +49,24 @@ function CompanyInfo() {
 
             {/* Y-TUNNUS */}
             <Typography className="section-title">
-              Y-tunnus:
+              Y-tunnus
             </Typography>
 
             <Typography>
               1234567-8
             </Typography>
+
+
+
+            <Typography className="section-title">
+              Meidän tarina
+            </Typography>
+            <Typography>
+              Olemme vuonna 2026 perustettu koirantarvike perheyritys. Myymme koiranleluja, vaatteita sekä koiranruokaa.
+              Panostamme kaikissa tuoteissasamme korkeaan laatuun. Olemme vasta aloittanut yritys, joten toimimme tällä vain Suomessa
+              toiveissamme on kuitenkin jo lähivuosina laajentaa muihin pohjoismaihin.
+            </Typography>
+
 
           </CardContent>
         </Card>
