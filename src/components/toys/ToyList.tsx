@@ -14,11 +14,11 @@ function ToyList() {
 
   // DATAGRID:IN SARAKKEIDEN MÄÄRITYS
   const columns: GridColDef[] = [
-    { field: "name", headerName: "Nimi", width: 200 },
-    { field: "price", headerName: "Hinta (€)", width: 120 },
-    { field: "manufacturerName", headerName: "Valmistaja", width: 180, renderCell: (params) => <span>{params.row.manufacturer?.mname ?? params.row.manufacturer ?? ''}</span> },
-    { field: "toyType", headerName: "Lelun tyyppi", width: 160 },
-    { field: "toySize", headerName: "Lelun koko", width: 140 }
+    { field: "name", headerName: "Nimi", width: 300 },
+    { field: "price", headerName: "Hinta (€)", width: 200 },
+    { field: "manufacturerName", headerName: "Valmistaja", width: 300, renderCell: (params) => <span>{params.row.manufacturer?.mname ?? params.row.manufacturer ?? ''}</span> },
+    { field: "toyType", headerName: "Lelun tyyppi", width: 300 },
+    { field: "toySize", headerName: "Lelun koko", width: 300 }
   ];
 
   // KOMPONENTIN LATAUTUESSA HAETAAN LELUT PALVELIMELTA

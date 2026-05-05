@@ -14,11 +14,11 @@ function FoodList() {
 
   // DATAGRID:IN SARAKKEIDEN MÄÄRITYS
   const columns: GridColDef[] = [
-    { field: "name", headerName: "Nimi", width: 200 },
-    { field: "price", headerName: "Hinta (€)", width: 120 },
-    { field: "manufacturerName", headerName: "Valmistaja", width: 180, renderCell: (params) => <span>{params.row.manufacturer?.mname ?? params.row.manufacturer ?? ''}</span> },
-    { field: "foodType", headerName: "Ruuan tyyppi", width: 160 },
-    { field: "dogAge", headerName: "Koiran ikä", width: 150 }
+    { field: "name", headerName: "Nimi", width: 300 },
+    { field: "price", headerName: "Hinta (€)", width: 200 },
+    { field: "manufacturerName", headerName: "Valmistaja", width: 300, renderCell: (params) => <span>{params.row.manufacturer?.mname ?? params.row.manufacturer ?? ''}</span> },
+    { field: "foodType", headerName: "Ruuan tyyppi", width: 300 },
+    { field: "dogAge", headerName: "Koiran ikä", width: 300 }
   ];
 
   // KOMPONENTIN LATAUTUESSA HAETAAN RUOAT PALVELIMELTA

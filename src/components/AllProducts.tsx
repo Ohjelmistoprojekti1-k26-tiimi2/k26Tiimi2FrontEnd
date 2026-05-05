@@ -16,20 +16,20 @@ function AllProducts() {
     const [loading, setLoading] = useState(false);
 
     const columns: GridColDef[] = [
-        { field: "name", headerName: "Nimi", width: 200 },
-        { field: "price", headerName: "Hinta (€)", width: 110 },
-        { field: "productType", headerName: "Tuotetyyppi", width: 130 },
+        { field: "name", headerName: "Nimi", width: 300 },
+        { field: "price", headerName: "Hinta (€)", width: 200 },
+        { field: "productType", headerName: "Tuotetyyppi", width: 300 },
         {
             field: "manufacturer",
             headerName: "Valmistaja",
-            width: 150,
+            width: 300,
             valueGetter: (value: any) =>
                 value && typeof value === "object" ? value.mname : (value ?? ""),
         },
         {
             field: "lisatiedot",
             headerName: "Lisätiedot",
-            width: 250,
+            width: 300,
             valueGetter: (_value: any, row: any) => {
                 const type = row.productType?.toLowerCase() ?? "";
                 if (type === "clothing" || type === "vaate") {
