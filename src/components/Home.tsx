@@ -65,7 +65,9 @@ function Home() {
 
       {/* KATEGORIAT-OSIO - NÄYTTÄÄ KOLME TUOTELUOKKAA (LELUT, VAATTEET, RUOKA) */}
       <div ref={categoriesRef} className="categories-page">
-        <h2 className="categories-title">Tutustu valikoimaan</h2>
+        <Link to="/manufacturer" className="categories-title-link">
+          <h2 className="categories-title">Tutustu valikoimaan</h2>
+        </Link>
 
         {/* KATEGORIOIDEN RUUDUKKO */}
         <div className="categories-grid">
