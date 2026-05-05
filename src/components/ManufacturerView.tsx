@@ -80,7 +80,8 @@ function ManufacturerView() {
             <Navbar />
 
             <div className="product-grid">
-                <h2>Selaa tuotteita valmistajan perusteella</h2>
+                <h2>Kaikki tuotteet</h2>
+                <h3>Suodata valmistajan perusteella</h3>
 
                 {/* DROPDOWN - VALMISTAJAN VALINTA */}
                 <Box sx={{ marginBottom: 3 }}>

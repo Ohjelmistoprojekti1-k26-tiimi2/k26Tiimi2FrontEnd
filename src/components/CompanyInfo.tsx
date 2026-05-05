@@ -34,11 +34,8 @@ function CompanyInfo() {
             </Typography>
 
             <Typography className="owners">
-              Peppi Vine <br />
-              Nadja Lyyra <br />
-              Greetel Marttinen <br />
-              Tanja Vatka <br />
-              Arttu Inkala
+              Omppu <br />
+              Rane
             </Typography>
 
             {/* PERUSTAMISVUOSI */}

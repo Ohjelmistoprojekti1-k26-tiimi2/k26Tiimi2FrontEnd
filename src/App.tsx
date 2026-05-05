@@ -11,7 +11,7 @@ import ManufacturerView from "./components/ManufacturerView";
 // PÄÄKOMPONENTTI - MÄÄRITTÄÄ KAIKKI REITIT SOVELLUKSEEN
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/k26Tiimi2FrontEnd">
       <Routes>
         {/* ETUSIVU */}
         <Route path="/" element={<Home />} />
