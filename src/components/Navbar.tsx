@@ -128,7 +128,7 @@ function Navbar() {
 
             {/* KOIRANRUOAT-LINKKI */}
             <MenuItem component={Link} to="/foods" onClick={handleClose} sx={menuItemStyles}>
-              Koiranruoat
+              Ruoat
             </MenuItem>
 
             {/* VAATTEET-LINKKI */}

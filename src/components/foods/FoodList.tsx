@@ -33,7 +33,7 @@ function FoodList() {
       <Navbar />
 
       <div className="product-grid">
-        <h2>Koiranruoat</h2>
+        <h2>Ruoat</h2>
 
         {/* DATAGRID - TAULUKKO RUOILLE */}
         <DataGrid
