@@ -67,7 +67,7 @@
 }
 
 /* ========================= */
-/* OIKEAN ALANURKAN KUVA */
+/* KUVAT */
 /* ========================= */
 
 .decorative-image {
@@ -80,7 +80,22 @@
 
 .decorative-image img {
     display: block;
-    max-width: 400px;
+    max-width: 380px;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.left-image {
+    position: fixed;
+    bottom: 0;
+    left: 15px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.left-image img {
+    display: block;
+    max-width: 250px;
     width: 100%;
     opacity: 0.9;
 }

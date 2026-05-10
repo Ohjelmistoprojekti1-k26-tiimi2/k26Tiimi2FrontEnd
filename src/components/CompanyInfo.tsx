@@ -3,6 +3,8 @@ import { Card, CardContent, Typography, Box } from "@mui/material";
 import Navbar from "./Navbar";
 import "./CompanyInfo.css";
 import tietosivunKuva from "../assets/tietosivun_kuva.png";
+import omppujaraneKuva from "../assets/omppujarane.png";
+
 
 // YRITYSTIETOSIVUN KOMPONENTTI - NÄYTTÄÄ YRITYKSEN PERUSTIEDOT
 function CompanyInfo() {
@@ -20,7 +22,7 @@ function CompanyInfo() {
           <CardContent>
 
             {/* YRITYKSEN NIMI */}
-            <Typography variant="h6" className="section-title">
+            <Typography className="section-title">
               Yrityksen nimi
             </Typography>
 
@@ -33,8 +35,8 @@ function CompanyInfo() {
               Omistajat
             </Typography>
 
-            <Typography className="owners">
-              Omppu <br />
+            <Typography>
+              Omppu & <br />
               Rane
             </Typography>
 
@@ -56,15 +58,18 @@ function CompanyInfo() {
               1234567-8
             </Typography>
 
-
+            <br />
+            <br />
 
             <Typography className="section-title">
               Meidän tarina
             </Typography>
             <Typography>
-              Olemme vuonna 2026 perustettu koirantarvike perheyritys. Myymme koiranleluja, vaatteita sekä koiranruokaa.
-              Panostamme kaikissa tuoteissasamme korkeaan laatuun. Olemme vasta aloittanut yritys, joten toimimme tällä vain Suomessa
-              toiveissamme on kuitenkin jo lähivuosina laajentaa muihin pohjoismaihin.
+              Olemme vuonna 2026 perustettu koirantarvikkeita myyvä perheyritys. Myymme koiranleluja, -vaatteita sekä koiranruokaa.
+              Panostamme kaikissa tuoteissamme korkeaan laatuun. <br /> 
+              <br />
+              Sillä olemme vasta hiljattain aloittaneet liikentoimintamme, toimimme tällä hetkellä vain Suomessa.
+              Toiveenamme olisi kuitenkin jo lähivuosina laajentaa muihin pohjoismaihin.
             </Typography>
 
 
@@ -72,9 +77,14 @@ function CompanyInfo() {
         </Card>
       </Box>
 
-      {/* TIETOSIVUN KUVA OIKEASSA ALANURKASSA */}
+      {/* KOIRAKUVA OIKEASSA ALANURKASSA */}
       <div className="decorative-image">
         <img src={tietosivunKuva} alt="Tietosivun kuva" />
+      </div>
+
+      {/* OMPUN JA RANEN KUVA VASEMMASSA ALANURKASSA */}
+      <div className="left-image">
+        <img src={omppujaraneKuva} alt="Omppu ja Rane kuva" />
       </div>
 
     </div>
