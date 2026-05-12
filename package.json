@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "private": true,
+  "homepage": "https://ohjelmistoprojekti1-k26-tiimi2.github.io/k26Tiimi2FrontEnd/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
